@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-DribbleInSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BAD4C9818F7EEE8F202E29529AD02CFE</key>
+		<key>C23D96A76277B4041FE81A4DD3F936BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D0F8B655D53CAB8DEB479E7FD68216B2</key>
+		<key>CD6C9FB6B052E1CF663F8A56041EA163</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6BA36704ADBBFF11D38B719CFCE293B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -143,18 +143,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell:CustomTableViewCell=(tableView.dequeueReusableCell(withIdentifier: identifier) as? CustomTableViewCell)!
         
         if tableView==self.PopularTableView {
-            var dataModel:MainModel!
-            dataModel = self.PopualarDataArray[indexPath.row] as! MainModel
+            var dataModel:MainArrayModel!
+            dataModel = self.PopualarDataArray[indexPath.row] as! MainArrayModel
             
-            let name = dataModel.user.name
+            let name = dataModel.name
             
-            let location = dataModel.user.location
+            let location = dataModel.location
             
-            let avtarUrlString = dataModel.user.avatar_url
+            let avtarUrlString = dataModel.avatar_url
             let avatarUrl = URL.init(string: avtarUrlString! as String)
             
             
-            let ImageUrlString = dataModel.images.normal
+            let ImageUrlString = dataModel.normal
             let imageUrl = URL.init(string: ImageUrlString! as String)
             
             cell.profilePicImageView.layer.cornerRadius=cell.profilePicImageView.frame.size.height/2
@@ -169,18 +169,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
         }
         else if tableView==self.TimeTableView{
-            var dataModel:MainModel!
-            dataModel = self.TimeDataArray[indexPath.row] as! MainModel
+            var dataModel:MainArrayModel!
+            dataModel = self.TimeDataArray[indexPath.row] as! MainArrayModel
             
-            let name = dataModel.user.name
+            let name = dataModel.name
             
-            let location = dataModel.user.location
+            let location = dataModel.location
             
-            let avtarUrlString = dataModel.user.avatar_url
+            let avtarUrlString = dataModel.avatar_url
             let avatarUrl = URL.init(string: avtarUrlString! as String)
             
             
-            let ImageUrlString = dataModel.images.normal
+            let ImageUrlString = dataModel.normal
             let imageUrl = URL.init(string: ImageUrlString! as String)
             
             cell.profilePicImageView.layer.cornerRadius=cell.profilePicImageView.frame.size.height/2
@@ -193,18 +193,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             cell.picDetailsLabel.text="\(name!)\(location!)"
         }else{
-            var dataModel:MainModel!
-            dataModel = self.ReboundDataArray[indexPath.row] as! MainModel
+            var dataModel:MainArrayModel!
+            dataModel = self.ReboundDataArray[indexPath.row] as! MainArrayModel
             
-            let name = dataModel.user.name
+            let name = dataModel.name
             
-            let location = dataModel.user.location
+            let location = dataModel.location
             
-            let avtarUrlString = dataModel.user.avatar_url
+            let avtarUrlString = dataModel.avatar_url
             let avatarUrl = URL.init(string: avtarUrlString! as String)
             
             
-            let ImageUrlString = dataModel.images.normal
+            let ImageUrlString = dataModel.normal
             let imageUrl = URL.init(string: ImageUrlString! as String)
             
             cell.profilePicImageView.layer.cornerRadius=cell.profilePicImageView.frame.size.height/2
@@ -226,24 +226,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let imageUrl:URL!
         
         if tableView==self.PopularTableView {
-            let selectedData = self.PopualarDataArray .object(at: indexPath.row)as! MainModel
+            let selectedData = self.PopualarDataArray .object(at: indexPath.row)as! MainArrayModel
             
-            let imageUrlString:NSString = selectedData.images.hidpi!
+            let imageUrlString:NSString = selectedData.hidpi
             
             imageUrl = URL.init(string: imageUrlString as String)!
             
         }else if tableView==self.ReboundTableView{
-            let selectedData = self.ReboundDataArray .object(at: indexPath.row)as! MainModel
+            let selectedData = self.ReboundDataArray .object(at: indexPath.row)as! MainArrayModel
             
-            let imageUrlString = selectedData.images.hidpi!
+            let imageUrlString = selectedData.hidpi
             
-            imageUrl = URL.init(string: imageUrlString as String)!
+            imageUrl = URL.init(string: imageUrlString! as String)
         }else{
-            let selectedData = self.TimeDataArray .object(at: indexPath.row)as! MainModel
+            let selectedData = self.TimeDataArray .object(at: indexPath.row)as! MainArrayModel
             
-            let imageUrlString = selectedData.images.hidpi!
+            let imageUrlString = selectedData.hidpi
             
-            imageUrl = URL.init(string: imageUrlString as String)!
+            imageUrl = URL.init(string: imageUrlString! as String)
         }
         // Register Nib
         let photoView = PhotoViewController(nibName: "PhotoViewController", bundle: nil)
