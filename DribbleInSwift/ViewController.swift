@@ -198,7 +198,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             let name = dataModel.name
             
-            let location = dataModel.location
+            let location = dataModel.cool
             
             let avtarUrlString = dataModel.avatar_url
             let avatarUrl = URL.init(string: avtarUrlString! as String)
@@ -228,7 +228,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if tableView==self.PopularTableView {
             let selectedData = self.PopualarDataArray .object(at: indexPath.row)as! MainArrayModel
             
-            let imageUrlString:NSString = selectedData.hidpi
+            let imageUrlString:NSString = selectedData.hidpi!
             
             imageUrl = URL.init(string: imageUrlString as String)!
             

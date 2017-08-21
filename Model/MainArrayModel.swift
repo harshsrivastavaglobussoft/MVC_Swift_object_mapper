@@ -9,13 +9,14 @@ import UIKit
 import ObjectMapper
 
 class MainArrayModel: Mappable {
-    var id:NSString!
-    var teaser:NSString!
-    var hidpi:NSString!
-    var normal:NSString!
-    var name:NSString!
-    var location:NSString!
-    var avatar_url:NSString!
+    var id:NSString?=""
+    var teaser:NSString?=""
+    var hidpi:NSString?=""
+    var normal:NSString?=""
+    var name:NSString?=""
+    var location:NSString?=""
+    var avatar_url:NSString?=""
+    var place:NSString?=""
     
     required init?(map: Map) {
         
@@ -29,6 +30,8 @@ class MainArrayModel: Mappable {
         name       <- map["user.name"]
         location   <- map["user.location"]
         avatar_url <- map["user.avatar_url"]
+        place       <- map["place"]//this key is not present in response 
+        
     }
 
 }
