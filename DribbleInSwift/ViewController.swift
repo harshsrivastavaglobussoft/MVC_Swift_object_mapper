@@ -198,7 +198,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             let name = dataModel.name
             
-            let location = dataModel.cool
+            let location = dataModel.place
             
             let avtarUrlString = dataModel.avatar_url
             let avatarUrl = URL.init(string: avtarUrlString! as String)
